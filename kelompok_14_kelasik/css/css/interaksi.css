@@ -1,0 +1,86 @@
+html { scroll-behavior: smooth; }
+
+body { animation: halamanMasuk .5s ease both; }
+@keyframes halamanMasuk {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Menu navbar */
+.navbar nav a { position: relative; }
+.navbar nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
+  height: 2px; background: currentColor;
+  transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+}
+.navbar nav a:hover::after { transform: scaleX(1); }
+
+/* Logo */
+.logo img { transition: transform .35s ease; }
+.logo:hover img { transform: rotate(-6deg) scale(1.08); }
+
+/* Tombol */
+.tombol, .tombol-biru, .tombol-garis, .toggle-all, .theme-btn, .kembali {
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.tombol:hover, .tombol-biru:hover, .tombol-garis:hover, .toggle-all:hover, .theme-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.22);
+  filter: brightness(1.08);
+}
+.tombol:active, .tombol-biru:active, .tombol-garis:active, .toggle-all:active, .theme-btn:active {
+  transform: translateY(0) scale(.97); box-shadow: none;
+}
+.kembali:hover { transform: translateX(-4px); }
+
+/* Home */
+.hero-kartu { transition: transform .4s ease, box-shadow .4s ease; }
+.hero-kartu:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,.3); }
+
+/* About */
+.anggota li { animation: kartuMasuk .6s ease both; }
+.anggota li:nth-child(1) { animation-delay: .05s; }
+.anggota li:nth-child(2) { animation-delay: .15s; }
+.anggota li:nth-child(3) { animation-delay: .25s; }
+.anggota li:nth-child(4) { animation-delay: .35s; }
+.anggota li:nth-child(5) { animation-delay: .45s; }
+@keyframes kartuMasuk {
+  from { opacity: 0; transform: translateY(26px) scale(.95); }
+  to   { opacity: 1; transform: none; }
+}
+.kartu-anggota { transition: transform .3s ease; }
+.kartu-anggota:hover { transform: translateY(-8px); }
+.foto-bulat, .foto-persegi { overflow: hidden; }
+.foto-bulat { transition: box-shadow .3s ease; }
+.kartu-anggota:hover .foto-bulat { box-shadow: 0 14px 30px rgba(0,0,0,.35); }
+.foto-bulat img, .foto-persegi img { transition: transform .5s ease; }
+.kartu-anggota:hover .foto-bulat img { transform: scale(1.1); }
+.foto-persegi:hover img { transform: scale(1.05); }
+
+/* Halaman anggota */
+.panel-detail { animation: kartuMasuk .6s ease both; }
+
+/* Contact */
+.form-kontak input, .form-kontak textarea { transition: box-shadow .25s ease, transform .25s ease; }
+.form-kontak input:focus, .form-kontak textarea:focus {
+  outline: none; box-shadow: 0 0 0 3px rgba(100,150,255,.45); transform: translateY(-1px);
+}
+.kontak-kartu { transition: box-shadow .3s ease; }
+.kontak-kartu:hover { box-shadow: 0 16px 40px rgba(0,0,0,.25); }
+
+/* Learning */
+.learning-card { transition: transform .3s ease, box-shadow .3s ease; }
+.learning-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.2); }
+
+/* Fokus keyboard */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px; border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

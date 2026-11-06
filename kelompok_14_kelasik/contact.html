@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Team 14</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css\css\style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html" aria-label="Beranda Team 14"><img src="gambar/logo-sttnf-12-768x557.jpg" alt="Logo Team 14" width="34" height="34"></a>
+    <nav aria-label="Menu utama">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li><a href="learn.html">Learning</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main class="halaman">
+    <h1 class="judul judul-kiri">Contact Us</h1>
+    <div class="kontak-kartu">
+      <div class="kontak-gambar">
+        <img src="gambar/7.png" alt="Ilustrasi bohlam dan puzzle">
+      </div>
+      <form class="form-kontak" id="formKontak">
+        <h2>Get in Touch</h2>
+        <p class="sapa">Our friendly team would love to hear from you.</p>
+        <div class="baris-dua">
+          <label>First name <input type="text" name="first_name" autocomplete="given-name" required></label>
+          <label>Last name <input type="text" name="last_name" autocomplete="family-name" required></label>
+        </div>
+        <label>Email <input type="email" name="email" autocomplete="email" required></label>
+        <label>Message <textarea name="message" required></textarea></label>
+        <button class="tombol-biru" type="submit">Send</button>
+      </form>
+    </div>
+  </main>
+  <script src="js/interaksi.js"></script>
+</body>
+</html>
