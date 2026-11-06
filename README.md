@@ -1,83 +1,93 @@
-# Team 14 Website
+# 🌐 Website Team 14
 
-Website statis profil kelompok **Team 14**, dibuat dengan HTML, CSS, dan sedikit JavaScript. Tidak membutuhkan framework, proses build, ataupun server khusus.
+Website profil kelompok 14 yang dibuat sebagai tugas mata kuliah Pemrograman Web, Teknik Informatika angkatan 2026. Website ini memperkenalkan anggota tim, menyediakan formulir kontak, dan mendokumentasikan perjalanan belajar kami selama mengerjakan proyek.
 
-## Fitur
+## 📄 Halaman
 
-- **Home**: halaman sambutan dengan ilustrasi dan tombol menuju halaman About.
-- **About Us**: daftar 5 anggota kelompok. Tiap kartu membuka halaman profil anggota.
-- **Profil anggota**: foto, nama, peran, deskripsi singkat, tautan GitHub dan Instagram, serta tombol Sebelumnya / Selanjutnya untuk berpindah antar anggota.
-- **Contact**: formulir kontak (First name, Last name, Email, Message). Setelah tombol **Send** diklik, muncul alert animasi "Pesan terkirim!" yang dibuat dengan JavaScript murni.
-- **Learning**: banner ajakan belajar, tiga artikel (Teknologi AI, Robotic, Cyber Security) dengan tombol *Baca Detail*, dan tiga materi Course. Tombol **Buka** pada tiap materi menampilkan detail ringkasannya.
-- Tampilan responsif untuk desktop dan layar kecil (breakpoint 760px).
+| Halaman | File | Isi |
+|---|---|---|
+| Home | `index.html` | Halaman utama dengan sambutan dan tombol menuju About |
+| About Us | `about.html` | Daftar anggota tim dengan fitur pencarian |
+| Detail Anggota | `anggota-1.html` s/d `anggota-5.html` | Profil, peran, dan tautan GitHub/Instagram tiap anggota |
+| Contact | `contact.html` | Formulir kontak dengan notifikasi animasi saat pesan terkirim |
+| Learning | `learn.html` | Catatan pembelajaran: UI/UX Figma, HTML, dan JavaScript |
 
-## Struktur Folder
+## ✨ Fitur
+
+- **Dark mode / Light mode** yang tersimpan otomatis di browser
+- **Filter pencarian anggota** di halaman About
+- **Accordion** dan tombol "Buka semua" di halaman Learning
+- **Animasi reveal** saat halaman di-scroll
+- **Tombol kembali ke atas**
+- **Notifikasi pesan terkirim** dengan animasi pada formulir kontak
+- **Efek hover dan transisi** pada navbar, tombol, dan kartu
+- **Desain responsif** untuk berbagai ukuran layar
+
+## 🛠️ Teknologi
+
+- **HTML5** untuk struktur halaman dan tag semantik
+- **CSS3** untuk tampilan dan animasi
+- **JavaScript (Vanilla)** untuk interaksi, tanpa framework
+- **Figma** untuk perancangan UI/UX
+- **Google Fonts** (Lexend dan Syncopate)
+
+## 📁 Struktur Folder
 
 ```
-.
-├── index.html        # Home
-├── about.html        # Daftar anggota
-├── anggota-1.html    # Profil anggota 1
-├── anggota-2.html    # Profil anggota 2
-├── anggota-3.html    # Profil anggota 3
-├── anggota-4.html    # Profil anggota 4
-├── anggota-5.html    # Profil anggota 5
-├── contact.html      # Formulir kontak + alert animasi
-├── learn.html        # Artikel dan materi
-├── style.css         # Seluruh gaya situs
-└── gambar/           # Semua gambar (logo, foto anggota, ilustrasi)
+├── index.html
+├── about.html
+├── contact.html
+├── learn.html
+├── anggota-1.html
+├── anggota-2.html
+├── anggota-3.html
+├── anggota-4.html
+├── anggota-5.html
+├── css/
+│   └── css/
+│       └── style.css
+├── js/
+│   └── interaksi.js
+├── gambar/
+└── README.md
 ```
 
-## Aset Gambar
+## 🚀 Cara Menjalankan
 
-Folder `gambar/` harus ada di samping file HTML dan berisi file-file berikut:
-
-| File | Dipakai di |
-| --- | --- |
-| `logo-sttnf-12-768x557.jpg` | Logo navbar (semua halaman) |
-| `1.jpg` | Ilustrasi Home |
-| `miss.jpg`, `2.jpeg`, `zulfa.jpeg`, `4.jpeg` | Foto anggota (About dan halaman profil) |
-| `kontak.svg` | Ilustrasi halaman Contact |
-| `3963180.jpg` | Banner halaman Learning |
-| `ai.jpeg`, `bow.jpeg`, `c.jpeg` | Thumbnail artikel |
-| `wallhaven-4582e3.jpg` | Thumbnail materi |
-
-Jika gambar tidak muncul, periksa nama file dan huruf besar/kecilnya, karena beberapa server membedakan keduanya.
-
-## Cara Menjalankan
-
-1. Salin seluruh isi proyek, termasuk folder `gambar/`, ke satu folder.
-2. Buka `index.html` di browser, atau jalankan server lokal, misalnya:
-
+1. Clone repository ini:
    ```bash
-   python3 -m http.server 8000
+   git clone https://github.com/USERNAME/NAMA-REPOSITORY.git
    ```
+2. Masuk ke folder proyek:
+   ```bash
+   cd NAMA-REPOSITORY
+   ```
+3. Buka file `index.html` di browser, atau gunakan ekstensi **Live Server** di VS Code.
 
-   lalu buka `http://localhost:8000`.
+Tidak perlu instalasi tambahan karena proyek ini hanya memakai HTML, CSS, dan JavaScript murni.
 
-Font (Lexend dan Syncopate) dimuat dari Google Fonts, jadi perlu koneksi internet agar tampil sesuai desain. Tanpa internet, situs memakai font cadangan.
-
-## Anggota Tim
+## 👥 Anggota Tim
 
 | No | Nama | Peran |
-| --- | --- | --- |
-| 1 | Syamindera Wahyu | Ketua Kelompok |
-| 2 | Muhammad Rizky Hidayatulloh | Anggota |
-| 3 | Zulfa Zamain | Anggota |
-| 4 | Intan Nirmala | Anggota |
+|---|---|---|
+| 1 | Syamindera Wahyu | Anggota |
+| 2 | Muhammad Rizky Hidayatulloh | UI/UX Designer |
+| 3 | Zulfa Zamain | Frontend Developer |
+| 4 | Intan Nirmala | Contributor UI |
 | 5 | Malik Afrizal | Anggota |
 
-## Catatan Pengembangan
+## 📚 Yang Kami Pelajari
 
-- **Formulir kontak belum mengirim pesan ke mana pun.** Saat ini formulir hanya menampilkan alert dan mengosongkan isian. Agar pesan benar-benar terkirim, hubungkan dengan layanan seperti Formspree atau EmailJS, lalu tampilkan alert setelah proses kirim berhasil.
-- **Deskripsi anggota masih berupa teks contoh.** Ubah paragraf di `anggota-1.html` sampai `anggota-5.html`, dan lengkapi tautan GitHub / Instagram anggota 1 dan 5 yang masih mengarah ke beranda situs.
-- **Tombol Buka pada materi** hanya membuka dan menutup detail. Isi detail bisa diubah langsung di `learn.html`.
-- **Navigasi** diulang di setiap file HTML. Jika menambah halaman, tambahkan menunya di semua file.
-- Warna, font, dan ukuran utama dapat diatur lewat variabel CSS di bagian `:root` pada `style.css`.
+- **UI/UX dengan Figma**: sitemap, wireframe, Auto Layout, dan Components
+- **HTML**: struktur halaman dan tag semantik
+- **JavaScript**: DOM, event listener, dan mengubah tampilan lewat kode
 
-## Teknologi
+Cerita lengkap beserta kendala dan solusinya ada di halaman **Learning**.
 
-- HTML5
-- CSS3 (Grid, Flexbox, variabel CSS)
-- JavaScript (alert animasi pada Contact, tombol Buka pada Learning)
-- Google Fonts: Lexend dan Syncopate
+## 📝 Lisensi
+
+Proyek ini dibuat untuk keperluan pembelajaran.
+
+---
+
+Dibuat dengan ❤️ oleh **Kelompok 14**
