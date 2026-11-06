@@ -2,8 +2,7 @@
 
 Website profil kelompok 14 yang dibuat sebagai projek akhir hasil dari kelas KELASIK, Teknik Informatika angkatan 2026. Website ini memperkenalkan anggota tim, menyediakan formulir kontak, dan mendokumentasikan perjalanan belajar kami selama mengerjakan proyek.
 
-🔗 **Demo:** https://zulfazamain40-coder.github.io/figmauiux
-
+🔗 **Demo:** https://github.com/zulfazamain40-coder/figmauiux
 ## 📄 Halaman
 
 | Halaman | File | Isi |
